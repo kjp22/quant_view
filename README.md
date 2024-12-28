@@ -1,5 +1,5 @@
 # quant_view
-Easy to add panes on a tradingview chart using whatever coding language. 
+Easy to add panes on a tradingview chart using whatever coding language. The example in this case is with python, but the idea is that you can code your strategy or indicators in any language.
 
 Hey!
 
