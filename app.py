@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    with open('index12.html') as f:
+    with open('index.html') as f:
         return render_template_string(f.read())
 
 @app.route('/main.js')
