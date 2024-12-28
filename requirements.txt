@@ -1,0 +1,33 @@
+Requirements:
+
+Step1: Set Up a Virtual Environment (from terminal)
+
+# Install virtualenv if it's not installed
+pip3 install virtualenv
+
+# Create a virtual environment in your project directory
+python3 -m venv myenv
+
+# Activate the virtual environment
+source myenv/bin/activate
+
+Step2: Install Required Python Packages within the venv
+
+pip install Flask flask-cors yfinance pandas
+
+Step3: Go to directory and open vscode
+
+run in terminal:
+
+cd myenv
+
+code .
+
+Step4: In vs code create the 4 necessary files and install the "Live server" extension (ensure strategy.py, app.py, index.html, and main.js) are in the same directory)
+
+Step5: run strategy.py, then run app.py and then right click on index.html --> open with Live server
+
+in case you want to run in a specific port modify the code in app.py to:
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5001) 
