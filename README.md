@@ -53,5 +53,7 @@ For metadata you will have to pay attention on 4 things:
 4. Always use this script on line 76-81
 
 ***Important***
+
 Always send out your data using "data" and "metadata" in the main function
+
 If you want to plot your signals always use the "Signal" and the name for the series (same thing for Volume)
