@@ -27,7 +27,7 @@ data['Volume'] = data['Volume'].round(0)  # Volume might be an integer, so round
 
 I rounded the numbers, mostly for aethetic purposes.
 
-# Step 5: Convert Date to UNIX time and rename the column to 'time'
+# Convert Date to UNIX time and rename the column to 'time'
 data.index = pd.to_datetime(data.index)
 data['time'] = data.index.astype('int64') // 10**9  # This should correctly convert to UNIX time in seconds
 
