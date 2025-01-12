@@ -19,7 +19,8 @@ The tricky part is the main function within strategy.py but I think you guys wil
 
 Check here (strategy.py -- line 34)
 
-Round other numerical columns
+### Round other numerical columns
+
 data['Close'] = data['Close'].round(2)  # Round Close price
 data['Open'] = data['Open'].round(2)    # Round Open price
 data['High'] = data['High'].round(2)    # Round High price
@@ -28,18 +29,21 @@ data['Volume'] = data['Volume'].round(0)  # Volume might be an integer, so round
 
 I rounded the numbers, mostly for aethetic purposes.
 
-Convert Date to UNIX time and rename the column to 'time'
+### Convert Date to UNIX time and rename the column to 'time'
+
 data.index = pd.to_datetime(data.index)
 data['time'] = data.index.astype('int64') // 10**9  # This should correctly convert to UNIX time in seconds
 
 You also may need to convert your Date to Unix. Important is to name the Date dolume to "time" and run:
 
-Reset the index and check the 'time' column
+### Reset the index and check the 'time' column
+
 data.reset_index(drop=True, inplace=True)
 
 Also important is to run this:
 
-Replace NaN values
+### Replace NaN values
+
 data.fillna(value={'SMA20': 0, 'SMA50': 0, 'Signal': 0, 'Units': 0, 'Holdings': 0, 'Cash': 0, 'Equity': 0, 'Volume': 0}, inplace=True)
 
 ### As you can understand we fetch two things on the chart, data and metadata.
