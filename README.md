@@ -17,9 +17,9 @@ The tricky part is the main function within strategy.py but I think you guys wil
 
 ## A few tips on when you build your strategy and for data preparation:
 
-you see here (strategy.py line 34)
+Check here (strategy.py -- line 34)
 
-# Round other numerical columns
+Round other numerical columns
 data['Close'] = data['Close'].round(2)  # Round Close price
 data['Open'] = data['Open'].round(2)    # Round Open price
 data['High'] = data['High'].round(2)    # Round High price
