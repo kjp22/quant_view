@@ -2,9 +2,11 @@
 
 Hey everyone, I hope you enjoy this repo.
 
-I wanted to make this since 2016. Its an easy way to add panes on a tradingview chart using whatever coding language. The example in this case is with python, but the idea is that you can code your strategy or indicators in any language.
+I wanted to make this since 2016. I used a LWC library and built a standardarized chart where its easy to render and plot your trading data. 
 
-You can plot any indicators signals or equity curves on a tradingview LWC. (I haven't tested it for zigzag and others a bit more exotic indicators, but I guess it should work fine)
+Its also possible to **add panes** and since you just send out a JSON file you can use whatever coding language to build your strategies or indicators. The example in this case is with python.
+
+You can plot any indicators, your trading signals or even your equity curve. (I haven't tested it for zigzag and others a bit more exotic indicators, but I guess it should work fine)
 
 Looks like this if everything goes well:
 
