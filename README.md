@@ -7,6 +7,7 @@ I wanted to make this since 2016. Its an easy way to add panes on a tradingview 
 You can plot any indicators signals or equity curves on a tradingview LWC. (I haven't tested it for zigzag and others a bit more exotic indicators, but I guess it should work fine)
 
 Looks like this if everything goes well:
+
 ![image](https://github.com/user-attachments/assets/4288786f-72f7-4179-a53d-910374acdcb7)
 
 
@@ -14,7 +15,7 @@ It runs localy, and the only thing you need is to render the json data through t
 
 The tricky part is the main function within strategy.py but I think you guys will figure it out.
 
-A few tips on when you build your strategy and for data preparation:
+## A few tips on when you build your strategy and for data preparation:
 
 you see here (strategy.py line 34)
 
@@ -27,21 +28,21 @@ data['Volume'] = data['Volume'].round(0)  # Volume might be an integer, so round
 
 I rounded the numbers, mostly for aethetic purposes.
 
-# Convert Date to UNIX time and rename the column to 'time'
+Convert Date to UNIX time and rename the column to 'time'
 data.index = pd.to_datetime(data.index)
 data['time'] = data.index.astype('int64') // 10**9  # This should correctly convert to UNIX time in seconds
 
 You also may need to convert your Date to Unix. Important is to name the Date dolume to "time" and run:
 
-# Reset the index and check the 'time' column
+Reset the index and check the 'time' column
 data.reset_index(drop=True, inplace=True)
 
 Also important is to run this:
 
-# Replace NaN values
+Replace NaN values
 data.fillna(value={'SMA20': 0, 'SMA50': 0, 'Signal': 0, 'Units': 0, 'Holdings': 0, 'Cash': 0, 'Equity': 0, 'Volume': 0}, inplace=True)
 
-As you can understand we fetch two things on the chart, data and metadata.
+### As you can understand we fetch two things on the chart, data and metadata.
 
 For the data we need to select which columns we want to render. This you will find in line 64 within def main.
 
@@ -52,7 +53,7 @@ For metadata you will have to pay attention on 4 things:
 3. for any other time series just choose the type (area, line, histogram), the color and on which chart/pane you want to plot it on.
 4. Always use this script on line 76-81
 
-***Important***
+### ***Important***
 
 Always send out your data using "data" and "metadata" in the main function
 
