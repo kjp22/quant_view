@@ -64,3 +64,8 @@ For metadata you will have to pay attention on 4 things:
 Always send out your data using "data" and "metadata" in the main function
 
 If you want to plot your signals always use the name "Signal" in your data and also make sure the values are either -1 for short and 1 for long trades.
+
+# Leave your feedback
+
+I created an issue where you can go and comment with any ideas or feedback. 
+Thank you and happy plotting everyone :)
