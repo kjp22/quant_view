@@ -2,7 +2,7 @@
 
 Hey everyone, I hope you enjoy this repo.
 
-I wanted to make this since 2016. I used a LWC library and built a standardarized chart where its easy to render and plot your trading data. 
+I wanted to make this since 2016. I used the LWC library and built a standardarized chart where its easy to render and plot your trading data. 
 
 Its also possible to **add panes** and since in order to use this you just send a JSON file to the chart -- you can use whatever coding language to build your strategies or indicators. The example in this case is with python.
 
