@@ -1,5 +1,8 @@
 # quant_view
 
+Update: This repo was created to provide a solution to this github issue: https://github.com/tradingview/lightweight-charts/issues/50#issuecomment-2547981925
+Now its basically solved, adding panes is now supported, but still if you don't want to deal with javascript my chart is still a great solution to easily plot your data.
+
 Hey everyone, I hope you enjoy this repo.
 
 I wanted to make this since 2016. I used the LWC library and built a standardarized chart where its easy to render and plot your trading data. 
